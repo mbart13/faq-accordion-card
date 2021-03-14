@@ -18,7 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
 }
 
 .main-section {
@@ -45,11 +45,23 @@ body {
 .img-container::after {
   content: "";
   position: absolute;
-  top: -9.5rem;
-  left: .5rem;
+  bottom: 21rem;
+  left: 0;
   background: url(../images/bg-pattern-mobile.svg) center no-repeat;
-  width: 26.6rem;
-  height: 19.6rem;
+  width: 25rem;
+  height: 20rem;
+  top: -9rem;
+  left: 1.4rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .img-container::after {
+    width: 96.4rem;
+    background: url(../images/bg-pattern-desktop.svg) center no-repeat;
+    height: 94.4rem;
+    left: -56.5rem;
+    top: -30rem;
+  }
 }
 
 .img-mobile {
@@ -58,13 +70,21 @@ body {
   right: 2.2rem;
 }
 
+.img-desktop {
+  display: none;
+  z-index: 1;
+}
+
 .title {
   text-align: center;
   font-size: 3.2rem;
   text-transform: uppercase;
   color: #1d1e35;
-  padding-top: 8rem;
   padding-bottom: 2rem;
+}
+
+.faq {
+  padding-top: 8rem;
 }
 
 .faq-item {
@@ -75,7 +95,7 @@ body {
 .question {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   cursor: pointer;
 }
 
@@ -88,6 +108,7 @@ body {
   color: #4a4b5e;
   font-size: 1.3rem;
   font-weight: normal;
+  padding-right: 1rem;
 }
 
 .question-btn {
@@ -122,5 +143,56 @@ body {
 
 .show-text .question-text {
   font-weight: bold;
+}
+
+.footer {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .card {
+    flex-direction: row;
+    max-width: 920px;
+    width: 100%;
+    padding: 0;
+    position: relative;
+  }
+  .card::after {
+    content: "";
+    position: absolute;
+    background: url(../images/illustration-box-desktop.svg) no-repeat center;
+    width: 15rem;
+    height: 18rem;
+    z-index: 2;
+    left: -7rem;
+    bottom: 10rem;
+  }
+  .img-container {
+    overflow: hidden;
+    padding-top: 4.8rem;
+  }
+  .img-mobile {
+    display: none;
+  }
+  .img-desktop {
+    display: block;
+    position: absolute;
+    right: 6rem;
+  }
+  .img-container, .faq {
+    flex-basis: 50%;
+  }
+  .faq {
+    padding: 4.8rem 9rem 8.4rem 0;
+  }
+  .title {
+    text-align: left;
+  }
+  .question-text {
+    font-size: 1.4rem;
+  }
+  .answer {
+    font-size: 1.3rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
