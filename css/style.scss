@@ -54,6 +54,7 @@ body {
 
 .img-mobile {
   transform: translateX(-1rem);
+  width: 100%;
 }
 
 .img-desktop {
@@ -82,7 +83,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   background: transparent;
   border-color: transparent;
   outline: none;
