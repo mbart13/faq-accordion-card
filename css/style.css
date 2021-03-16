@@ -133,15 +133,21 @@ body {
   padding: 1rem 0;
 }
 
-@media screen and (min-width: 668px) {
+@media screen and (min-width: 41.75rem) {
   .card {
     max-width: 62rem;
     padding-left: 7rem;
     padding-right: 7rem;
   }
+  .question-text {
+    font-size: 1.4rem;
+  }
+  .answer {
+    font-size: 1.3rem;
+  }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 62.5rem) {
   .main-section {
     align-items: center;
   }
@@ -184,12 +190,6 @@ body {
   }
   .title {
     text-align: left;
-  }
-  .question-text {
-    font-size: 1.4rem;
-  }
-  .answer {
-    font-size: 1.3rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

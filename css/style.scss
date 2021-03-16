@@ -6,6 +6,7 @@ $color-grey-1: hsl(237, 12%, 33%); // question
 $color-grey-2: hsl(240, 6%, 50%); // answer
 $color-grey-10: hsl(240, 5%, 91%);
 $transition: all 0.3s linear;
+$breakpoints-up: ('tablet': '41.75rem', 'desktop' : '62.5rem');
 
 
 html {
@@ -145,16 +146,24 @@ body {
   padding: 1rem 0;
 }
 
-@media screen and (min-width: 668px) {
+@media screen and (min-width: map-get($breakpoints-up, 'tablet')) {
   .card {
     max-width: 62rem;
     padding-left: 7rem;
     padding-right: 7rem;
   }
+
+  .question-text {
+    font-size: 1.4rem;
+  }
+
+  .answer {
+    font-size: 1.3rem;
+  }
 }
 
-@media screen and (min-width: 1000px) {
 
+@media screen and (min-width: map-get($breakpoints-up, 'desktop')) {
   .main-section {
     align-items: center;
   }
@@ -207,11 +216,4 @@ body {
     text-align: left;
   }
 
-  .question-text {
-    font-size: 1.4rem;
-  }
-
-  .answer {
-    font-size: 1.3rem;
-  }
 }
