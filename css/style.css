@@ -5,19 +5,28 @@ html {
 *, ::after, ::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background: linear-gradient(#af67e9, #6565e7);
   line-height: 1.5;
 }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   min-height: 100vh;
 }
 
@@ -25,25 +34,34 @@ body {
   background-color: #fff;
   border-radius: 3.2rem;
   margin: 12rem auto;
-  padding: 4.8rem 2.4rem 6.4rem;
+  padding: 0 2.4rem 6.4rem;
   max-width: 32.8rem;
   width: 95vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  box-shadow: 0 5rem 5rem -2rem rgba(53, 18, 122, 0.5);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 5rem 5rem -2rem rgba(53, 18, 122, 0.5);
+          box-shadow: 0 5rem 5rem -2rem rgba(53, 18, 122, 0.5);
 }
 
 .img-container {
   position: relative;
-  margin: -15.5rem auto 0;
+  margin-bottom: -14rem;
   background: url(../images/bg-pattern-mobile.svg) no-repeat;
-  padding-bottom: 2rem;
-  background-position: 2rem 11rem;
+  background-position: center 0;
+  background-size: 90%;
 }
 
 .img-mobile {
-  transform: translateX(-1rem);
   width: 100%;
+  margin: auto;
+  display: block;
+  -webkit-transform: translateY(-55%) translateX(-1.25rem);
+          transform: translateY(-55%) translateX(-1.25rem);
 }
 
 .img-desktop {
@@ -60,7 +78,7 @@ body {
 }
 
 .faq {
-  padding-top: 3rem;
+  padding-top: 7rem;
 }
 
 .faq-item {
@@ -70,9 +88,15 @@ body {
 
 .question {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   background: transparent;
   border-color: transparent;
   outline: none;
@@ -90,6 +114,7 @@ body {
 }
 
 .question .arrow {
+  -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
@@ -109,7 +134,9 @@ body {
 }
 
 .footer {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   text-align: center;
 }
 
@@ -122,7 +149,8 @@ body {
 }
 
 .show-text .arrow {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .show-text .question-text {
@@ -140,6 +168,13 @@ body {
     padding-left: 7rem;
     padding-right: 7rem;
   }
+  .img-container {
+    margin-bottom: -12rem;
+    background-size: 50%;
+  }
+  .img-mobile {
+    max-width: 25rem;
+  }
   .question-text {
     font-size: 1.4rem;
   }
@@ -150,10 +185,15 @@ body {
 
 @media screen and (min-width: 62.5rem) {
   .main-section {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .card {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     max-width: 92rem;
     width: 100%;
     padding: 0;
@@ -181,10 +221,12 @@ body {
   }
   .img-desktop {
     display: block;
-    transform: translateY(5rem) translateX(-7rem);
+    -webkit-transform: translateY(5rem) translateX(-7rem);
+            transform: translateY(5rem) translateX(-7rem);
   }
   .img-container, .faq {
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
   .faq {
     padding: 4.8rem 9rem 8.4rem 0;
