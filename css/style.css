@@ -169,11 +169,10 @@ body {
     padding-right: 7rem;
   }
   .img-container {
-    margin-bottom: -12rem;
     background-size: 50%;
   }
   .img-mobile {
-    max-width: 25rem;
+    max-width: 28rem;
   }
   .question-text {
     font-size: 1.4rem;
